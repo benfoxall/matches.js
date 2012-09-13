@@ -1,8 +1,6 @@
 
 (function(){
 
-
-
 	var matches = function(query, array){
 
 		// the element that will be populated
@@ -15,10 +13,12 @@
 			var el = array[i];
 			var score = 0;
 
+			var elToks = el.split(' ');
+
 			for (var t = tokens.length - 1; t >= 0; t--) {
-				if(el.indexOf(tokens[t]) != -1){
+				if(elToks.indexOf(tokens[t]) != -1){
 					score += 1/tokenCount;
-				} 
+				}
 			}
 
 			if(score > maxScore){

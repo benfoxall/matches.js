@@ -25,3 +25,9 @@ test( "matching substring", function() {
 	var found = matches('peugot 205', ['landrover', 'rover', 'peugot', 'madza']);
 	equal(found, 'peugot');
 });
+
+
+test( "mr mrs", function() {
+	var found = matches('Mr', ['Mr', 'Mrs', 'Dr', 'Captain']);
+	equal(found, 'Mr');
+});
